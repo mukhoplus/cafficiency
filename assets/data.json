@@ -22,7 +22,7 @@
     ]
   },
   {
-    "id": "1",
+    "id": "2",
     "brand": "스타벅스",
     "name": "블론드 카페 아메리카노",
     "category": "Franchise",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "3",
     "brand": "스타벅스",
     "name": "카페 라떼",
     "category": "Franchise",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "4",
     "brand": "스타벅스",
     "name": "블론드 카페 라떼",
     "category": "Franchise",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "5",
     "brand": "메가MGC커피",
     "name": "아메리카노",
     "category": "Franchise",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "6",
     "brand": "메가MGC커피",
     "name": "카페라떼",
     "category": "Franchise",
@@ -125,12 +125,7 @@
         "caffeine": 189.9,
         "price": 2900
       },
-      {
-        "sizeName": "ICE",
-        "volume": "591ml",
-        "caffeine": 199.1,
-        "price": 2900
-      }
+      { "sizeName": "ICE", "volume": "591ml", "caffeine": 199.1, "price": 2900 }
     ]
   },
   {
@@ -160,7 +155,7 @@
     ]
   },
   {
-    "id": "10",
+    "id": "9",
     "brand": "이디야",
     "name": "아메리카노",
     "category": "Franchise",
@@ -186,7 +181,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": "10",
     "brand": "이디야",
     "name": "카페라떼",
     "category": "Franchise",
@@ -212,7 +207,7 @@
     ]
   },
   {
-    "id": "13",
+    "id": "11",
     "brand": "탐앤탐스",
     "name": "아메리카노",
     "category": "Franchise",
@@ -232,7 +227,7 @@
     ]
   },
   {
-    "id": "14",
+    "id": "12",
     "brand": "탐앤탐스",
     "name": "카페라떼",
     "category": "Franchise",
@@ -340,7 +335,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "15",
     "brand": "하삼동커피",
     "name": "아메리카노",
     "category": "Franchise",
@@ -350,7 +345,7 @@
     ]
   },
   {
-    "id": "18",
+    "id": "16",
     "brand": "하삼동커피",
     "name": "카페라떼",
     "category": "Franchise",
@@ -360,7 +355,7 @@
     ]
   },
   {
-    "id": "19",
+    "id": "17",
     "brand": "할리스",
     "name": "아메리카노",
     "category": "Franchise",
@@ -374,7 +369,7 @@
     ]
   },
   {
-    "id": "20",
+    "id": "18",
     "brand": "할리스",
     "name": "카페 라떼",
     "category": "Franchise",
@@ -388,7 +383,7 @@
     ]
   },
   {
-    "id": "21",
+    "id": "19",
     "brand": "컴포즈커피",
     "name": "아메리카노",
     "category": "Franchise",
@@ -408,7 +403,7 @@
     ]
   },
   {
-    "id": "22",
+    "id": "20",
     "brand": "컴포즈커피",
     "name": "카페라떼",
     "category": "Franchise",
@@ -422,7 +417,7 @@
     ]
   },
   {
-    "id": "23",
+    "id": "21",
     "brand": "파스쿠찌",
     "name": "아메리카노",
     "category": "Franchise",
@@ -448,7 +443,7 @@
     ]
   },
   {
-    "id": "24",
+    "id": "22",
     "brand": "파스쿠찌",
     "name": "카페라떼",
     "category": "Franchise",
@@ -474,7 +469,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "23",
     "brand": "동서식품",
     "name": "맥심 모카골드 마일드",
     "category": "Mix",
@@ -483,7 +478,7 @@
     ]
   },
   {
-    "id": "26",
+    "id": "24",
     "brand": "동서식품",
     "name": "맥심 화이트골드",
     "category": "Mix",
@@ -492,7 +487,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "25",
     "brand": "남양유업",
     "name": "프렌치카페 카페믹스",
     "category": "Mix",
@@ -501,7 +496,7 @@
     ]
   },
   {
-    "id": "28",
+    "id": "26",
     "brand": "네슬레코리아",
     "name": "네스카페 신선한 모카",
     "category": "Mix",
@@ -510,7 +505,7 @@
     ]
   },
   {
-    "id": "29",
+    "id": "27",
     "brand": "동서식품",
     "name": "카누 아메리카노 마일드 로스트",
     "category": "Mix",
