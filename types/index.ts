@@ -16,9 +16,11 @@ export interface Drink {
 }
 
 export type SortOption = "HighCaffeine" | "LowPrice" | "BestEfficiency";
+export type SortOrder = "asc" | "desc";
 
 export interface FilterState {
   searchQuery: string;
   category: Category | "All";
   sortBy: SortOption;
+  sortOrder: SortOrder;
 }

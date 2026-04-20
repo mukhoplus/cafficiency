@@ -7,24 +7,39 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Pressable,
 } from "react-native";
-import { Search, Coffee, Zap, DollarSign } from "lucide-react-native";
+import {
+  Search,
+  Zap,
+  DollarSign,
+  ArrowUp,
+  ArrowDown,
+  Coffee,
+  Info,
+} from "lucide-react-native";
 import * as Progress from "react-native-progress";
 import { useSearchStore } from "@/store/useSearchStore";
 import drinksData from "@/assets/data.json";
-import { Drink, SortOption } from "@/types";
+import { Drink, Category, SortOption } from "@/types";
+import { Link } from "expo-router";
 
 const PRIMARY_COLOR = "#6F4E37";
 const ACCENT_COLOR = "#FFD700";
 
-const EfficiencyBadge = ({
-  caffeine,
-  price,
-}: {
-  caffeine: number;
+interface FlatDrink {
+  id: string;
+  brand: string;
+  name: string;
+  category: Category;
+  sizeName: string;
+  volume: string;
   price: number;
-}) => {
-  const efficiency = (caffeine / price) * 100;
+  caffeine: number;
+  efficiency: number;
+}
+
+const EfficiencyBadge = ({ efficiency }: { efficiency: number }) => {
   return (
     <View style={styles.badge}>
       <DollarSign size={12} color={PRIMARY_COLOR} />
@@ -33,16 +48,17 @@ const EfficiencyBadge = ({
   );
 };
 
-const DrinkCard = ({ drink }: { drink: Drink }) => {
-  const defaultSize = drink.sizes[0];
+const DrinkCard = ({ drink }: { drink: FlatDrink }) => {
   const maxCaffeine = 300;
 
   return (
     <View style={styles.card}>
       <View style={styles.cardHeader}>
-        <View>
+        <View style={{ flex: 1 }}>
           <Text style={styles.brandText}>{drink.brand}</Text>
-          <Text style={styles.drinkName}>{drink.name}</Text>
+          <Text style={styles.drinkName}>
+            {drink.name} ({drink.sizeName})
+          </Text>
         </View>
         <View
           style={[
@@ -58,37 +74,35 @@ const DrinkCard = ({ drink }: { drink: Drink }) => {
       </View>
 
       <View style={styles.cardBody}>
-        <View style={styles.sizeSection}>
-          {drink.sizes.map((size, idx) => (
-            <View key={idx} style={styles.sizeInfo}>
-              <Text style={styles.sizeLabel}>
-                {size.sizeName} ({size.volume})
-              </Text>
+        <View style={styles.detailContainer}>
+          <View style={styles.sizeInfo}>
+            <Text style={styles.sizeLabel}>용량: {drink.volume}</Text>
+            <View style={styles.priceRow}>
               <Text style={styles.priceText}>
-                ₩{size.price.toLocaleString()}
+                ₩{drink.price.toLocaleString()}
               </Text>
             </View>
-          ))}
-        </View>
+          </View>
 
-        <View style={styles.caffeineRow}>
-          <Zap size={16} color={ACCENT_COLOR} fill={ACCENT_COLOR} />
-          <Text style={styles.caffeineValue}>{defaultSize.caffeine}mg</Text>
-          <Progress.Bar
-            progress={Math.min(defaultSize.caffeine / maxCaffeine, 1)}
-            width={null}
-            height={8}
-            color={PRIMARY_COLOR}
-            unfilledColor="#E0E0E0"
-            borderWidth={0}
-            style={styles.progressBar}
-          />
+          <View style={styles.caffeineRow}>
+            <View style={styles.caffeineHeader}>
+              <View style={styles.caffeineLabelGroup}>
+                <Zap size={16} color={ACCENT_COLOR} fill={ACCENT_COLOR} />
+                <Text style={styles.caffeineValue}>{drink.caffeine}mg</Text>
+              </View>
+              <EfficiencyBadge efficiency={drink.efficiency} />
+            </View>
+            <Progress.Bar
+              progress={Math.min(drink.caffeine / maxCaffeine, 1)}
+              width={null}
+              height={10}
+              color={PRIMARY_COLOR}
+              unfilledColor="#E0E0E0"
+              borderWidth={0}
+              style={styles.progressBar}
+            />
+          </View>
         </View>
-
-        <EfficiencyBadge
-          caffeine={defaultSize.caffeine}
-          price={defaultSize.price}
-        />
       </View>
     </View>
   );
@@ -99,13 +113,35 @@ export default function SearchScreen() {
     searchQuery,
     category,
     sortBy,
+    sortOrder,
     setSearchQuery,
     setCategory,
     setSortBy,
+    toggleSortOrder,
   } = useSearchStore();
 
+  const flattenedDrinks = useMemo(() => {
+    const flat: FlatDrink[] = [];
+    (drinksData as Drink[]).forEach((drink) => {
+      drink.sizes.forEach((size, idx) => {
+        flat.push({
+          id: `${drink.brand}-${drink.name}-${size.sizeName}-${idx}`,
+          brand: drink.brand,
+          name: drink.name,
+          category: drink.category,
+          sizeName: size.sizeName,
+          volume: size.volume,
+          price: size.price,
+          caffeine: size.caffeine,
+          efficiency: (size.caffeine / size.price) * 100,
+        });
+      });
+    });
+    return flat;
+  }, []);
+
   const filteredDrinks = useMemo(() => {
-    let result = [...drinksData] as Drink[];
+    let result = [...flattenedDrinks];
 
     if (searchQuery) {
       const lowerQuery = searchQuery.toLowerCase();
@@ -121,32 +157,40 @@ export default function SearchScreen() {
     }
 
     result.sort((a, b) => {
-      const aBest = a.sizes[0];
-      const bBest = b.sizes[0];
-
-      if (sortBy === "HighCaffeine") return bBest.caffeine - aBest.caffeine;
-      if (sortBy === "LowPrice") return aBest.price - bBest.price;
-      if (sortBy === "BestEfficiency") {
-        const aEff = aBest.caffeine / aBest.price;
-        const bEff = bBest.caffeine / bBest.price;
-        return bEff - aEff;
+      let comparison = 0;
+      if (sortBy === "HighCaffeine") {
+        comparison = a.caffeine - b.caffeine;
+      } else if (sortBy === "LowPrice") {
+        comparison = a.price - b.price;
+      } else if (sortBy === "BestEfficiency") {
+        comparison = a.efficiency - b.efficiency;
       }
-      return 0;
+
+      return sortOrder === "desc" ? -comparison : comparison;
     });
 
     return result;
-  }, [searchQuery, category, sortBy]);
+  }, [flattenedDrinks, searchQuery, category, sortBy, sortOrder]);
 
   const categories: (typeof category)[] = ["All", "Franchise", "Mix"];
   const sortOptions: { label: string; value: SortOption }[] = [
     { label: "고카페인", value: "HighCaffeine" },
-    { label: "최저가", value: "LowPrice" },
+    { label: "가격", value: "LowPrice" },
     { label: "가성비", value: "BestEfficiency" },
   ];
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <View style={styles.headerTop}>
+          <Text style={styles.headerTitle}>카성비</Text>
+          <Link href="/modal" asChild>
+            <Pressable hitSlop={10}>
+              <Info size={22} color={PRIMARY_COLOR} />
+            </Pressable>
+          </Link>
+        </View>
+
         <View style={styles.searchBar}>
           <Search size={20} color="#9E9E9E" />
           <TextInput
@@ -185,7 +229,13 @@ export default function SearchScreen() {
           {sortOptions.map((opt) => (
             <TouchableOpacity
               key={opt.value}
-              onPress={() => setSortBy(opt.value)}
+              onPress={() => {
+                if (sortBy === opt.value) {
+                  toggleSortOrder();
+                } else {
+                  setSortBy(opt.value);
+                }
+              }}
               style={[
                 styles.filterChip,
                 sortBy === opt.value && styles.sortChipActive,
@@ -199,6 +249,15 @@ export default function SearchScreen() {
               >
                 {opt.label}
               </Text>
+              {sortBy === opt.value && (
+                <View style={{ marginLeft: 4 }}>
+                  {sortOrder === "asc" ? (
+                    <ArrowDown size={14} color="#FFF" />
+                  ) : (
+                    <ArrowUp size={14} color="#FFF" />
+                  )}
+                </View>
+              )}
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -221,12 +280,29 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#F5F5F5" },
+  container: {
+    flex: 1,
+    backgroundColor: "#F5F5F5",
+    userSelect: "none",
+  },
   header: {
     padding: 16,
+    paddingTop: 40,
     backgroundColor: "#FFF",
     borderBottomWidth: 1,
     borderBottomColor: "#EEEEEE",
+    userSelect: "none",
+  },
+  headerTop: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: "800",
+    color: PRIMARY_COLOR,
   },
   searchBar: {
     flexDirection: "row",
@@ -236,10 +312,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     height: 48,
     marginBottom: 12,
+    userSelect: "auto",
   },
-  searchInput: { flex: 1, marginLeft: 8, fontSize: 16, color: "#212121" },
+  searchInput: {
+    flex: 1,
+    marginLeft: 8,
+    fontSize: 16,
+    color: "#212121",
+    userSelect: "auto",
+  },
   filterRow: { flexDirection: "row" },
   filterChip: {
+    flexDirection: "row",
+    alignItems: "center",
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
@@ -273,7 +358,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginBottom: 12,
+    marginBottom: 16,
   },
   brandText: {
     fontSize: 12,
@@ -285,27 +370,44 @@ const styles = StyleSheet.create({
   categoryBadge: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 4 },
   categoryText: { fontSize: 10, fontWeight: "bold", color: "#616161" },
   cardBody: { borderTopWidth: 1, borderTopColor: "#F5F5F5", paddingTop: 12 },
-  sizeSection: { marginBottom: 8 },
+  detailContainer: {
+    backgroundColor: "#FAFAFA",
+    borderRadius: 12,
+    padding: 12,
+  },
   sizeInfo: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 4,
+    alignItems: "center",
+    marginBottom: 12,
   },
-  sizeLabel: { fontSize: 13, color: "#616161" },
-  priceText: { fontSize: 13, fontWeight: "600", color: PRIMARY_COLOR },
-  caffeineRow: { flexDirection: "row", alignItems: "center", marginBottom: 12 },
+  sizeLabel: { fontSize: 14, color: "#616161", fontWeight: "500" },
+  priceRow: { flexDirection: "row", alignItems: "center" },
+  priceText: { fontSize: 16, fontWeight: "bold", color: PRIMARY_COLOR },
+  caffeineRow: {
+    width: "100%",
+  },
+  caffeineHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  caffeineLabelGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   caffeineValue: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
     color: "#212121",
-    marginHorizontal: 8,
+    marginLeft: 6,
   },
-  progressBar: { flex: 1 },
+  progressBar: { width: "100%" },
   badge: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#F5F5F5",
-    alignSelf: "flex-start",
+    backgroundColor: "#EFEBE9",
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
@@ -316,6 +418,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 4,
   },
+  emptyText: {
+    marginTop: 12,
+    fontSize: 16,
+    color: "#BDBDBD",
+  },
   emptyState: { alignItems: "center", marginTop: 60 },
-  emptyText: { marginTop: 12, fontSize: 16, color: "#9E9E9E" },
 });

@@ -5,91 +5,391 @@
     "name": "카페 아메리카노",
     "category": "Franchise",
     "sizes": [
-      {
-        "sizeName": "Tall",
-        "volume": "355ml",
-        "caffeine": 150,
-        "price": 4500
-      },
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 150, "price": 4500 },
       {
         "sizeName": "Grande",
         "volume": "473ml",
         "caffeine": 225,
         "price": 5000
       },
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 300, "price": 5500 }
+    ]
+  },
+  {
+    "id": "2",
+    "brand": "스타벅스",
+    "name": "카페 라떼",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 75, "price": 5000 },
       {
-        "sizeName": "Venti",
-        "volume": "591ml",
-        "caffeine": 300,
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 150,
+        "price": 5500
+      },
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 150, "price": 6000 }
+    ]
+  },
+  {
+    "id": "3",
+    "brand": "메가MGC커피",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "HOT", "volume": "20oz", "caffeine": 193, "price": 1500 },
+      { "sizeName": "ICE", "volume": "24oz", "caffeine": 193, "price": 2000 }
+    ]
+  },
+  {
+    "id": "4",
+    "brand": "메가MGC커피",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "HOT", "volume": "20oz", "caffeine": 193, "price": 2900 },
+      { "sizeName": "ICE", "volume": "24oz", "caffeine": 193, "price": 2900 }
+    ]
+  },
+  {
+    "id": "5",
+    "brand": "엔제리너스",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Small",
+        "volume": "355ml",
+        "caffeine": 140,
+        "price": 4500
+      },
+      {
+        "sizeName": "Regular",
+        "volume": "473ml",
+        "caffeine": 187,
+        "price": 5000
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "brand": "엔제리너스",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Small",
+        "volume": "355ml",
+        "caffeine": 140,
+        "price": 5000
+      },
+      {
+        "sizeName": "Regular",
+        "volume": "473ml",
+        "caffeine": 187,
         "price": 5500
       }
     ]
   },
   {
-    "id": "2",
-    "brand": "메가커피",
+    "id": "7",
+    "brand": "빽다방",
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
-      {
-        "sizeName": "HOT",
-        "volume": "20oz",
-        "caffeine": 200,
-        "price": 1500
-      },
-      {
-        "sizeName": "ICE",
-        "volume": "24oz",
-        "caffeine": 200,
-        "price": 2000
-      }
+      { "sizeName": "HOT", "volume": "450ml", "caffeine": 237, "price": 1500 },
+      { "sizeName": "ICE", "volume": "625ml", "caffeine": 237, "price": 2000 }
     ]
   },
   {
-    "id": "3",
-    "brand": "동서식품",
-    "name": "맥심 모카골드 마일드",
-    "category": "Mix",
+    "id": "8",
+    "brand": "빽다방",
+    "name": "카페라떼",
+    "category": "Franchise",
     "sizes": [
-      {
-        "sizeName": "1스틱",
-        "volume": "12g",
-        "caffeine": 42.5,
-        "price": 150
-      }
+      { "sizeName": "HOT", "volume": "450ml", "caffeine": 237, "price": 3000 },
+      { "sizeName": "ICE", "volume": "625ml", "caffeine": 237, "price": 3000 }
     ]
   },
   {
-    "id": "4",
-    "brand": "남양유업",
-    "name": "프렌치카페 카페믹스",
-    "category": "Mix",
+    "id": "9",
+    "brand": "이디야",
+    "name": "아메리카노",
+    "category": "Franchise",
     "sizes": [
-      {
-        "sizeName": "1스틱",
-        "volume": "10.9g",
-        "caffeine": 45,
-        "price": 140
-      }
+      { "sizeName": "Large", "volume": "18oz", "caffeine": 232, "price": 3200 },
+      { "sizeName": "Extra", "volume": "22oz", "caffeine": 348, "price": 4200 }
     ]
   },
   {
-    "id": "5",
-    "brand": "투썸플레이스",
-    "name": "카페 라떼",
+    "id": "10",
+    "brand": "이디야",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Large", "volume": "18oz", "caffeine": 232, "price": 3700 },
+      { "sizeName": "Extra", "volume": "22oz", "caffeine": 348, "price": 4900 }
+    ]
+  },
+  {
+    "id": "11",
+    "brand": "카페베네",
+    "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
       {
         "sizeName": "Regular",
         "volume": "355ml",
-        "caffeine": 170,
+        "caffeine": 121,
+        "price": 4500
+      },
+      { "sizeName": "Large", "volume": "473ml", "caffeine": 182, "price": 5000 }
+    ]
+  },
+  {
+    "id": "12",
+    "brand": "카페베네",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "355ml",
+        "caffeine": 121,
         "price": 5000
+      },
+      { "sizeName": "Large", "volume": "473ml", "caffeine": 182, "price": 5500 }
+    ]
+  },
+  {
+    "id": "13",
+    "brand": "탐앤탐스",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 134, "price": 4400 },
+      {
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 201,
+        "price": 4900
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "brand": "탐앤탐스",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 134, "price": 5000 },
+      {
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 201,
+        "price": 5500
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "brand": "투썸플레이스",
+    "name": "아메리카노 (블랙그라운드)",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "355ml",
+        "caffeine": 177,
+        "price": 4500
       },
       {
         "sizeName": "Large",
         "volume": "473ml",
-        "caffeine": 255,
-        "price": 5500
+        "caffeine": 236,
+        "price": 5000
+      },
+      { "sizeName": "Max", "volume": "591ml", "caffeine": 354, "price": 5500 }
+    ]
+  },
+  {
+    "id": "16",
+    "brand": "투썸플레이스",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "355ml",
+        "caffeine": 177,
+        "price": 5000
+      },
+      { "sizeName": "Large", "volume": "473ml", "caffeine": 236, "price": 5500 }
+    ]
+  },
+  {
+    "id": "17",
+    "brand": "하삼동커피",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Basic", "volume": "20oz", "caffeine": 150, "price": 1500 }
+    ]
+  },
+  {
+    "id": "18",
+    "brand": "하삼동커피",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      { "sizeName": "Basic", "volume": "20oz", "caffeine": 150, "price": 2700 }
+    ]
+  },
+  {
+    "id": "19",
+    "brand": "할리스",
+    "name": "카페 아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "354ml",
+        "caffeine": 121,
+        "price": 4500
+      },
+      {
+        "sizeName": "Grande",
+        "volume": "472ml",
+        "caffeine": 182,
+        "price": 5000
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "brand": "할리스",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "354ml",
+        "caffeine": 121,
+        "price": 5200
+      },
+      {
+        "sizeName": "Grande",
+        "volume": "472ml",
+        "caffeine": 182,
+        "price": 5700
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "brand": "컴포즈커피",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "ICE/HOT",
+        "volume": "20oz",
+        "caffeine": 156,
+        "price": 1500
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "brand": "컴포즈커피",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "ICE/HOT",
+        "volume": "20oz",
+        "caffeine": 156,
+        "price": 2900
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "brand": "파스쿠찌",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "384ml",
+        "caffeine": 145,
+        "price": 4500
+      },
+      { "sizeName": "Large", "volume": "480ml", "caffeine": 218, "price": 5000 }
+    ]
+  },
+  {
+    "id": "24",
+    "brand": "파스쿠찌",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "384ml",
+        "caffeine": 145,
+        "price": 5000
+      },
+      { "sizeName": "Large", "volume": "480ml", "caffeine": 218, "price": 5500 }
+    ]
+  },
+  {
+    "id": "25",
+    "brand": "동서식품",
+    "name": "맥심 모카골드 마일드",
+    "category": "Mix",
+    "sizes": [
+      { "sizeName": "1스틱", "volume": "12g", "caffeine": 42.5, "price": 160 }
+    ]
+  },
+  {
+    "id": "26",
+    "brand": "동서식품",
+    "name": "맥심 화이트골드",
+    "category": "Mix",
+    "sizes": [
+      { "sizeName": "1스틱", "volume": "11.7g", "caffeine": 39, "price": 170 }
+    ]
+  },
+  {
+    "id": "27",
+    "brand": "남양유업",
+    "name": "프렌치카페 카페믹스",
+    "category": "Mix",
+    "sizes": [
+      { "sizeName": "1스틱", "volume": "10.9g", "caffeine": 45, "price": 150 }
+    ]
+  },
+  {
+    "id": "28",
+    "brand": "네슬레코리아",
+    "name": "네스카페 신선한 모카",
+    "category": "Mix",
+    "sizes": [
+      { "sizeName": "1스틱", "volume": "11.7g", "caffeine": 35, "price": 150 }
+    ]
+  },
+  {
+    "id": "29",
+    "brand": "동서식품",
+    "name": "카누 아메리카노 마일드 로스트",
+    "category": "Mix",
+    "sizes": [
+      {
+        "sizeName": "1스틱(미니)",
+        "volume": "0.9g",
+        "caffeine": 33,
+        "price": 230
       }
     ]
   }
