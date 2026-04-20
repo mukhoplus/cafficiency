@@ -470,6 +470,40 @@
   },
   {
     "id": "23",
+    "brand": "바나프레소",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "ICE/HOT",
+        "volume": "710ml",
+        "caffeine": 203.4,
+        "price": 2000
+      },
+      {
+        "sizeName": "바나리카노 (ICE)",
+        "volume": "940ml",
+        "caffeine": 406.08,
+        "price": 3300
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "brand": "바나프레소",
+    "name": "카페라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "ICE/HOT",
+        "volume": "710ml",
+        "caffeine": 203.4,
+        "price": 3300
+      }
+    ]
+  },
+  {
+    "id": "25",
     "brand": "동서식품",
     "name": "맥심 모카골드 마일드",
     "category": "Mix",
@@ -478,7 +512,7 @@
     ]
   },
   {
-    "id": "24",
+    "id": "26",
     "brand": "동서식품",
     "name": "맥심 화이트골드",
     "category": "Mix",
@@ -487,7 +521,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "27",
     "brand": "남양유업",
     "name": "프렌치카페 카페믹스",
     "category": "Mix",
@@ -496,7 +530,7 @@
     ]
   },
   {
-    "id": "26",
+    "id": "28",
     "brand": "네슬레코리아",
     "name": "네스카페 신선한 모카",
     "category": "Mix",
@@ -505,7 +539,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "29",
     "brand": "동서식품",
     "name": "카누 아메리카노 마일드 로스트",
     "category": "Mix",
