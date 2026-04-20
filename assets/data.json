@@ -1,0 +1,96 @@
+[
+  {
+    "id": "1",
+    "brand": "스타벅스",
+    "name": "카페 아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Tall",
+        "volume": "355ml",
+        "caffeine": 150,
+        "price": 4500
+      },
+      {
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 225,
+        "price": 5000
+      },
+      {
+        "sizeName": "Venti",
+        "volume": "591ml",
+        "caffeine": 300,
+        "price": 5500
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "brand": "메가커피",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "HOT",
+        "volume": "20oz",
+        "caffeine": 200,
+        "price": 1500
+      },
+      {
+        "sizeName": "ICE",
+        "volume": "24oz",
+        "caffeine": 200,
+        "price": 2000
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "brand": "동서식품",
+    "name": "맥심 모카골드 마일드",
+    "category": "Mix",
+    "sizes": [
+      {
+        "sizeName": "1스틱",
+        "volume": "12g",
+        "caffeine": 42.5,
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "brand": "남양유업",
+    "name": "프렌치카페 카페믹스",
+    "category": "Mix",
+    "sizes": [
+      {
+        "sizeName": "1스틱",
+        "volume": "10.9g",
+        "caffeine": 45,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "brand": "투썸플레이스",
+    "name": "카페 라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular",
+        "volume": "355ml",
+        "caffeine": 170,
+        "price": 5000
+      },
+      {
+        "sizeName": "Large",
+        "volume": "473ml",
+        "caffeine": 255,
+        "price": 5500
+      }
+    ]
+  }
+]
