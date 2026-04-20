@@ -5,14 +5,42 @@
     "name": "카페 아메리카노",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Tall", "volume": "355ml", "caffeine": 150, "price": 4500 },
+      {
+        "sizeName": "Short (Hot)",
+        "volume": "237ml",
+        "caffeine": 75,
+        "price": 3900
+      },
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 150, "price": 4700 },
       {
         "sizeName": "Grande",
         "volume": "473ml",
         "caffeine": 225,
-        "price": 5000
+        "price": 5300
       },
-      { "sizeName": "Venti", "volume": "591ml", "caffeine": 300, "price": 5500 }
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 300, "price": 6100 }
+    ]
+  },
+  {
+    "id": "1",
+    "brand": "스타벅스",
+    "name": "블론드 카페 아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Short (Hot)",
+        "volume": "237ml",
+        "caffeine": 85,
+        "price": 3900
+      },
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 170, "price": 4700 },
+      {
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 255,
+        "price": 5300
+      },
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 340, "price": 6100 }
     ]
   },
   {
@@ -21,14 +49,42 @@
     "name": "카페 라떼",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Tall", "volume": "355ml", "caffeine": 75, "price": 5000 },
+      {
+        "sizeName": "Short (Hot)",
+        "volume": "237ml",
+        "caffeine": 75,
+        "price": 4400
+      },
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 75, "price": 5200 },
       {
         "sizeName": "Grande",
         "volume": "473ml",
         "caffeine": 150,
-        "price": 5500
+        "price": 5800
       },
-      { "sizeName": "Venti", "volume": "591ml", "caffeine": 150, "price": 6000 }
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 150, "price": 6600 }
+    ]
+  },
+  {
+    "id": "2",
+    "brand": "스타벅스",
+    "name": "블론드 카페 라떼",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Short (Hot)",
+        "volume": "237ml",
+        "caffeine": 85,
+        "price": 4400
+      },
+      { "sizeName": "Tall", "volume": "355ml", "caffeine": 85, "price": 5200 },
+      {
+        "sizeName": "Grande",
+        "volume": "473ml",
+        "caffeine": 170,
+        "price": 5800
+      },
+      { "sizeName": "Venti", "volume": "591ml", "caffeine": 170, "price": 6600 }
     ]
   },
   {
@@ -37,8 +93,24 @@
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "HOT", "volume": "20oz", "caffeine": 193, "price": 1500 },
-      { "sizeName": "ICE", "volume": "24oz", "caffeine": 193, "price": 2000 }
+      {
+        "sizeName": "HOT",
+        "volume": "591ml",
+        "caffeine": 204.2,
+        "price": 1700
+      },
+      {
+        "sizeName": "ICE",
+        "volume": "710ml",
+        "caffeine": 199.7,
+        "price": 2000
+      },
+      {
+        "sizeName": "메가리카노",
+        "volume": "946ml",
+        "caffeine": 290.8,
+        "price": 3300
+      }
     ]
   },
   {
@@ -47,47 +119,17 @@
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "HOT", "volume": "20oz", "caffeine": 193, "price": 2900 },
-      { "sizeName": "ICE", "volume": "24oz", "caffeine": 193, "price": 2900 }
-    ]
-  },
-  {
-    "id": "5",
-    "brand": "엔제리너스",
-    "name": "아메리카노",
-    "category": "Franchise",
-    "sizes": [
       {
-        "sizeName": "Small",
-        "volume": "355ml",
-        "caffeine": 140,
-        "price": 4500
+        "sizeName": "HOT",
+        "volume": "591ml",
+        "caffeine": 189.9,
+        "price": 2900
       },
       {
-        "sizeName": "Regular",
-        "volume": "473ml",
-        "caffeine": 187,
-        "price": 5000
-      }
-    ]
-  },
-  {
-    "id": "6",
-    "brand": "엔제리너스",
-    "name": "카페라떼",
-    "category": "Franchise",
-    "sizes": [
-      {
-        "sizeName": "Small",
-        "volume": "355ml",
-        "caffeine": 140,
-        "price": 5000
-      },
-      {
-        "sizeName": "Regular",
-        "volume": "473ml",
-        "caffeine": 187,
-        "price": 5500
+        "sizeName": "ICE",
+        "volume": "591ml",
+        "caffeine": 199.1,
+        "price": 2900
       }
     ]
   },
@@ -97,8 +139,14 @@
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "HOT", "volume": "450ml", "caffeine": 237, "price": 1500 },
-      { "sizeName": "ICE", "volume": "625ml", "caffeine": 237, "price": 2000 }
+      { "sizeName": "HOT", "volume": "473ml", "caffeine": 197, "price": 2000 },
+      { "sizeName": "ICE", "volume": "710ml", "caffeine": 166, "price": 2500 },
+      {
+        "sizeName": "빽사이즈 (ICE)",
+        "volume": "710ml",
+        "caffeine": 166,
+        "price": 3500
+      }
     ]
   },
   {
@@ -107,58 +155,60 @@
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "HOT", "volume": "450ml", "caffeine": 237, "price": 3000 },
-      { "sizeName": "ICE", "volume": "625ml", "caffeine": 237, "price": 3000 }
-    ]
-  },
-  {
-    "id": "9",
-    "brand": "이디야",
-    "name": "아메리카노",
-    "category": "Franchise",
-    "sizes": [
-      { "sizeName": "Large", "volume": "18oz", "caffeine": 232, "price": 3200 },
-      { "sizeName": "Extra", "volume": "22oz", "caffeine": 348, "price": 4200 }
+      { "sizeName": "HOT", "volume": "473ml", "caffeine": 152, "price": 3200 },
+      { "sizeName": "ICE", "volume": "710ml", "caffeine": 163, "price": 3600 }
     ]
   },
   {
     "id": "10",
     "brand": "이디야",
-    "name": "카페라떼",
-    "category": "Franchise",
-    "sizes": [
-      { "sizeName": "Large", "volume": "18oz", "caffeine": 232, "price": 3700 },
-      { "sizeName": "Extra", "volume": "22oz", "caffeine": 348, "price": 4900 }
-    ]
-  },
-  {
-    "id": "11",
-    "brand": "카페베네",
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
       {
-        "sizeName": "Regular",
-        "volume": "355ml",
-        "caffeine": 121,
-        "price": 4500
+        "sizeName": "Large",
+        "volume": "520ml",
+        "caffeine": 158,
+        "price": 3200
       },
-      { "sizeName": "Large", "volume": "473ml", "caffeine": 182, "price": 5000 }
+      {
+        "sizeName": "Extra (HOT)",
+        "volume": "650ml",
+        "caffeine": 237,
+        "price": 4200
+      },
+      {
+        "sizeName": "Extra (ICE)",
+        "volume": "670ml",
+        "caffeine": 237,
+        "price": 4200
+      }
     ]
   },
   {
-    "id": "12",
-    "brand": "카페베네",
+    "id": "9",
+    "brand": "이디야",
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
       {
-        "sizeName": "Regular",
-        "volume": "355ml",
-        "caffeine": 121,
-        "price": 5000
+        "sizeName": "Large",
+        "volume": "520ml",
+        "caffeine": 158,
+        "price": 4200
       },
-      { "sizeName": "Large", "volume": "473ml", "caffeine": 182, "price": 5500 }
+      {
+        "sizeName": "Extra (HOT)",
+        "volume": "650ml",
+        "caffeine": 237,
+        "price": 5200
+      },
+      {
+        "sizeName": "Extra (ICE)",
+        "volume": "670ml",
+        "caffeine": 237,
+        "price": 5200
+      }
     ]
   },
   {
@@ -167,12 +217,17 @@
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Tall", "volume": "355ml", "caffeine": 134, "price": 4400 },
       {
-        "sizeName": "Grande",
-        "volume": "473ml",
-        "caffeine": 201,
-        "price": 4900
+        "sizeName": "ICE",
+        "volume": "410ml",
+        "caffeine": 178.29,
+        "price": 4600
+      },
+      {
+        "sizeName": "HOT",
+        "volume": "310ml",
+        "caffeine": 178.29,
+        "price": 4600
       }
     ]
   },
@@ -182,49 +237,106 @@
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Tall", "volume": "355ml", "caffeine": 134, "price": 5000 },
       {
-        "sizeName": "Grande",
+        "sizeName": "ICE",
+        "volume": "410ml",
+        "caffeine": 178.29,
+        "price": 5200
+      },
+      {
+        "sizeName": "HOT",
+        "volume": "310ml",
+        "caffeine": 178.29,
+        "price": 5200
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "brand": "투썸플레이스",
+    "name": "아메리카노",
+    "category": "Franchise",
+    "sizes": [
+      {
+        "sizeName": "Regular (HOT)",
+        "volume": "414ml",
+        "caffeine": 177,
+        "price": 4500
+      },
+      {
+        "sizeName": "Regular (ICE)",
+        "volume": "414ml",
+        "caffeine": 155,
+        "price": 4500
+      },
+      {
+        "sizeName": "Large (HOT)",
         "volume": "473ml",
-        "caffeine": 201,
+        "caffeine": 236,
+        "price": 5000
+      },
+      {
+        "sizeName": "Large (ICE)",
+        "volume": "473ml",
+        "caffeine": 213,
+        "price": 5000
+      },
+      {
+        "sizeName": "Max (HOT)",
+        "volume": "591ml",
+        "caffeine": 354,
+        "price": 5500
+      },
+      {
+        "sizeName": "Max (ICE)",
+        "volume": "591ml",
+        "caffeine": 310,
         "price": 5500
       }
     ]
   },
   {
-    "id": "15",
-    "brand": "투썸플레이스",
-    "name": "아메리카노 (블랙그라운드)",
-    "category": "Franchise",
-    "sizes": [
-      {
-        "sizeName": "Regular",
-        "volume": "355ml",
-        "caffeine": 177,
-        "price": 4500
-      },
-      {
-        "sizeName": "Large",
-        "volume": "473ml",
-        "caffeine": 236,
-        "price": 5000
-      },
-      { "sizeName": "Max", "volume": "591ml", "caffeine": 354, "price": 5500 }
-    ]
-  },
-  {
-    "id": "16",
+    "id": "14",
     "brand": "투썸플레이스",
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
       {
-        "sizeName": "Regular",
-        "volume": "355ml",
+        "sizeName": "Regular (HOT)",
+        "volume": "414ml",
         "caffeine": 177,
         "price": 5000
       },
-      { "sizeName": "Large", "volume": "473ml", "caffeine": 236, "price": 5500 }
+      {
+        "sizeName": "Regular (ICE)",
+        "volume": "414ml",
+        "caffeine": 155,
+        "price": 5000
+      },
+      {
+        "sizeName": "Large (HOT)",
+        "volume": "473ml",
+        "caffeine": 236,
+        "price": 5500
+      },
+      {
+        "sizeName": "Large (ICE)",
+        "volume": "473ml",
+        "caffeine": 213,
+        "price": 5500
+      },
+      {
+        "sizeName": "Max (HOT)",
+        "volume": "591ml",
+        "caffeine": 354,
+        "price": 6000
+      },
+      {
+        "sizeName": "Max (ICE)",
+        "volume": "591ml",
+        "caffeine": 310,
+        "price": 6000
+      }
     ]
   },
   {
@@ -233,7 +345,8 @@
     "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Basic", "volume": "20oz", "caffeine": 150, "price": 1500 }
+      { "sizeName": "ICE", "volume": "591ml", "caffeine": 181, "price": 1800 },
+      { "sizeName": "HOT", "volume": "561ml", "caffeine": 181, "price": 1800 }
     ]
   },
   {
@@ -242,46 +355,35 @@
     "name": "카페라떼",
     "category": "Franchise",
     "sizes": [
-      { "sizeName": "Basic", "volume": "20oz", "caffeine": 150, "price": 2700 }
+      { "sizeName": "ICE", "volume": "591ml", "caffeine": 181, "price": 2900 },
+      { "sizeName": "HOT", "volume": "561ml", "caffeine": 181, "price": 2900 }
     ]
   },
   {
     "id": "19",
     "brand": "할리스",
-    "name": "카페 아메리카노",
+    "name": "아메리카노",
     "category": "Franchise",
     "sizes": [
       {
         "sizeName": "Regular",
         "volume": "354ml",
-        "caffeine": 121,
+        "caffeine": 114,
         "price": 4500
-      },
-      {
-        "sizeName": "Grande",
-        "volume": "472ml",
-        "caffeine": 182,
-        "price": 5000
       }
     ]
   },
   {
     "id": "20",
     "brand": "할리스",
-    "name": "카페라떼",
+    "name": "카페 라떼",
     "category": "Franchise",
     "sizes": [
       {
         "sizeName": "Regular",
         "volume": "354ml",
-        "caffeine": 121,
-        "price": 5200
-      },
-      {
-        "sizeName": "Grande",
-        "volume": "472ml",
-        "caffeine": 182,
-        "price": 5700
+        "caffeine": 127,
+        "price": 5000
       }
     ]
   },
@@ -293,9 +395,15 @@
     "sizes": [
       {
         "sizeName": "ICE/HOT",
-        "volume": "20oz",
+        "volume": "591ml",
         "caffeine": 156,
         "price": 1500
+      },
+      {
+        "sizeName": "Big-pose (ICE)",
+        "volume": "946ml",
+        "caffeine": 312,
+        "price": 4000
       }
     ]
   },
@@ -307,8 +415,8 @@
     "sizes": [
       {
         "sizeName": "ICE/HOT",
-        "volume": "20oz",
-        "caffeine": 156,
+        "volume": "591ml",
+        "caffeine": 208,
         "price": 2900
       }
     ]
@@ -321,11 +429,22 @@
     "sizes": [
       {
         "sizeName": "Regular",
-        "volume": "384ml",
-        "caffeine": 145,
-        "price": 4500
+        "volume": "370ml",
+        "caffeine": 213,
+        "price": 4700
       },
-      { "sizeName": "Large", "volume": "480ml", "caffeine": 218, "price": 5000 }
+      {
+        "sizeName": "Large",
+        "volume": "470ml",
+        "caffeine": 231,
+        "price": 5300
+      },
+      {
+        "sizeName": "Venti (ICE)",
+        "volume": "580ml",
+        "caffeine": 335,
+        "price": 6100
+      }
     ]
   },
   {
@@ -336,11 +455,22 @@
     "sizes": [
       {
         "sizeName": "Regular",
-        "volume": "384ml",
-        "caffeine": 145,
-        "price": 5000
+        "volume": "370ml",
+        "caffeine": 219,
+        "price": 5200
       },
-      { "sizeName": "Large", "volume": "480ml", "caffeine": 218, "price": 5500 }
+      {
+        "sizeName": "Large",
+        "volume": "470ml",
+        "caffeine": 242,
+        "price": 5800
+      },
+      {
+        "sizeName": "Venti (ICE)",
+        "volume": "580ml",
+        "caffeine": 438,
+        "price": 6600
+      }
     ]
   },
   {
