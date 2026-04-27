@@ -19,6 +19,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="카성비" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="apple-touch-icon" href="/pwa-icon.svg" />
 
         {/* 
           Disable body scrolling on web. This makes ScrollView components work closer to how they do on native. 
@@ -28,6 +29,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
 
         {/* Using raw CSS styles as an escape-hatch to ensure the background color never flickers in dark-mode. */}
         <style dangerouslySetInnerHTML={{ __html: responsiveBackground }} />
+        <script dangerouslySetInnerHTML={{ __html: registerServiceWorker }} />
         {/* Add any additional <head> elements that you want globally available on web... */}
       </head>
       <body>{children}</body>
@@ -44,3 +46,11 @@ body {
     background-color: #000;
   }
 }`;
+
+const registerServiceWorker = `
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+`;

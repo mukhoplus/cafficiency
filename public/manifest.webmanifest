@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "카성비",
   "short_name": "카성비",
   "description": "카페 메뉴를 탐색하고 비교하는 앱",
@@ -12,7 +13,13 @@
       "src": "/pwa-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
   ]
 }
