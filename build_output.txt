@@ -1,0 +1,35 @@
+
+> cafficiency@1.0.0 export:web
+> expo export --platform web
+
+(node:23169) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Starting Metro Bundler
+Static rendering is enabled. Learn more: https://docs.expo.dev/router/reference/static-rendering/
+λ Bundled 1153ms node_modules/expo-router/node/render.js (2426 modules)
+Web Bundled 1624ms node_modules/expo-router/entry.js (2493 modules)
+
+Exporting 7 static routes:
+/two (22.9 kB)
+/modal (62 kB)
+/ (index) (56.4 kB)
+/_sitemap (61.9 kB)
+/+not-found (58.6 kB)
+/(tabs)/two (22.9 kB)
+/(tabs) (56.4 kB)
+
+Exporting 1 bundle for web:
+_expo/static/js/web/entry-e96b4b08891f3c3f1d23605f1c9f9c7a.js (3.08 MB)
+
+Exporting 9 files:
+assets/assets/fonts/SpaceMono-Regular.49a79d66bdea2debf1832bf4d7aca127.ttf (93.3 kB)
+assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.b06871f281fee6b241d60582ae9369b9.ttf (166 kB)
+assets/node_modules/@react-navigation/elements/lib/module/assets/back-icon-mask.5223c8d9b0d08b82a5670fb5f71faf78.png (913 B)
+assets/node_modules/@react-navigation/elements/lib/module/assets/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207 B)
+assets/node_modules/expo-router/assets/error.563d5e3294b67811d0a1aede6f601e30.png (516 B)
+assets/node_modules/expo-router/assets/file.b6c297a501e289394b0bc5dc69c265e6.png (158 B)
+assets/node_modules/expo-router/assets/forward.9d9c5644f55c2f6e4b7f247c378b2fe9.png (250 B)
+assets/node_modules/expo-router/assets/pkg.5974eb3e1c5314e8d5a822702d7d0740.png (429 B)
+favicon.ico (14.5 kB)
+
+App exported to: dist

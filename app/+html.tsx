@@ -19,7 +19,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="카성비" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="apple-touch-icon" href="/pwa-icon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png" />
 
         {/* 
           Disable body scrolling on web. This makes ScrollView components work closer to how they do on native. 
