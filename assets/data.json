@@ -389,7 +389,13 @@
     "category": "Franchise",
     "sizes": [
       {
-        "sizeName": "ICE/HOT",
+        "sizeName": "ICE",
+        "volume": "591ml",
+        "caffeine": 185.8,
+        "price": 1800
+      },
+      {
+        "sizeName": "HOT",
         "volume": "591ml",
         "caffeine": 156,
         "price": 1500
@@ -397,8 +403,8 @@
       {
         "sizeName": "Big-pose (ICE)",
         "volume": "946ml",
-        "caffeine": 312,
-        "price": 4000
+        "caffeine": 371.6,
+        "price": 3000
       }
     ]
   },
@@ -411,7 +417,7 @@
       {
         "sizeName": "ICE/HOT",
         "volume": "591ml",
-        "caffeine": 208,
+        "caffeine": 247.7,
         "price": 2900
       }
     ]
