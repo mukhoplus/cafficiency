@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="카성비">
+  <rect width="512" height="512" rx="256" fill="#7b5e3b"/>
+  <g fill="#ffffff">
+    <path d="M166 180h168v122c0 52-42 94-94 94h-56c-52 0-94-42-94-94v-28c0-52 42-94 94-94zm0 34c-33 0-60 27-60 60v28c0 33 27 60 60 60h56c33 0 60-27 60-60v-88H166z"/>
+    <path d="M344 208h22c25 0 46 21 46 46s-21 46-46 46h-22v-34h22c7 0 12-5 12-12s-5-12-12-12h-22v-34z"/>
+    <rect x="122" y="372" width="208" height="22" rx="11"/>
+    <rect x="194" y="122" width="34" height="48" rx="17" transform="rotate(-25 211 146)"/>
+    <rect x="250" y="110" width="34" height="56" rx="17" transform="rotate(0 267 138)"/>
+    <rect x="306" y="122" width="34" height="48" rx="17" transform="rotate(25 323 146)"/>
+  </g>
+</svg>
